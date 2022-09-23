@@ -25,7 +25,7 @@ const Rings = ({ size, pie, data, theme, opacity }: RingsProps) => {
         const color = opacity ? dataObj.backgroundColor || dataObj.color : dataObj.color;
         const ringColor = color || theme.RingColors[idx];
         // check decimals between 0 and 1
-        if (!(dataObj.value > 0 && dataObj.value <= 1)) {
+        if (!(dataObj.value > 0)) {
           return null;
         }
         return (
